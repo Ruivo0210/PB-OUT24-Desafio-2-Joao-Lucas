@@ -1,0 +1,11 @@
+:root{
+    --black: #000000;
+    --lightgrey: #F2F0F1;
+    --darkgrey: #F0F0F0;
+    
+    /* Remover */
+    font-family: "Integral CF Bold";
+    font-family: "Integral CF Regular";
+    font-family: "Satoshi";
+    font-family: "Satoshi Black";
+}
