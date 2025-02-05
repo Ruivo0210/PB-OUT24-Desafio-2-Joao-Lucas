@@ -1,3 +1,5 @@
+/* ---- Root ---- */
+
 :root{
     --black: #000000;
     --lightgrey: #F2F0F1;
@@ -9,3 +11,4 @@
     font-family: "Satoshi";
     font-family: "Satoshi Black";
 }
+
