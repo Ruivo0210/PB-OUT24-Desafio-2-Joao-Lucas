@@ -6,9 +6,233 @@
     --darkgrey: #F0F0F0;
     
     /* Remover */
-    font-family: "Integral CF Bold";
+    /* font-family: "Integral CF Bold";
     font-family: "Integral CF Regular";
     font-family: "Satoshi";
-    font-family: "Satoshi Black";
+    font-family: "Satoshi Black"; */
 }
 
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Satoshi", sans-serif;
+}
+
+.wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Buttons */
+
+.btn{
+    padding: 16px 32px;
+    border-radius: 24px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    position: relative;
+    padding: 16px 54px;
+    gap: 12px;
+    border-radius: 62px;
+    border: 1px;
+}
+
+.btn.dark{
+    background: var(--black);
+    color: #fff;
+}
+
+.btn.light{
+    background: #fff;
+    color: var(--black);
+}
+
+/* Header */
+
+header{
+    background-color: var(--lightgrey);
+    width: 100%;
+    padding-top: 50px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+    padding: 30px 10%;
+    white-space: nowrap;
+}
+
+nav .logo{
+    font-family: "Integral CF Bold",serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--black);
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li a{
+    font-family: "Satoshi", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--black);
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 30px;
+    padding: 10px 15px;
+    width: 180px;
+    flex-grow: 1;
+    margin: 10px 10px;
+}
+
+.search-container input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 16px;
+    flex: 1;
+    color: #6c6c6c;
+}
+
+.search-container svg {
+    width: 20px;
+    height: 20px;
+    fill: #6c6c6c;
+    margin-right: 10px;
+}
+
+/* Hero Section */
+
+.hero-section{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+
+.hero-section .left h1{
+    font-family: "Integral CF Bold", serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 64px;
+    text-align: left;
+    color: var(--black);
+    margin-bottom: 0;
+}
+
+.hero-section .left p{
+    font-family: "Satoshi", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    color: #00000099;
+    margin-bottom: 30px;
+    width: 580px;
+}
+
+.hero-section .left{
+    flex: 1;
+}
+
+.hero-section .right{
+    align-self: flex-end;
+}
+
+.hero-section .right img{
+    height: 620px;
+    vertical-align: middle;
+}
+
+/* Achievement Cards */
+
+.achievement-cards{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    max-width: 200px
+}
+
+.achievement-card{
+    min-width: 200px;
+}
+
+.achievement-card .content{
+    padding: 8px 32px;
+    z-index: 10;
+    position: relative;
+}
+
+.achievement-card.brands{
+    left: 47%;
+    top: 330px;
+}
+
+.achievement-card.products{
+    left: 45%;
+    top: 520px;
+}
+
+.achievement-card.costumers{
+    left: 43%;
+    top: 610px;
+}
+
+.achievement-card .content div{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.achievement-card h3{
+    font-family: "Satoshi", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: left;
+    color: var(--black);
+    margin: 0;
+}
+
+.achievement-card p{
+    font-family: "Satoshi", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    color: var(--black);
+    margin-top: -8px;
+    margin-bottom: 8px;
+}
+
+.brand{
+    padding: 30px;
+    display:flex;
+    gap: 2em;
+    flex-wrap: wrap; 
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
