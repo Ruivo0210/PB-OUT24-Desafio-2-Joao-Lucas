@@ -2,6 +2,7 @@
 
 :root{
     --black: #000000;
+    --lightblack: #00000099;
     --lightgrey: #F2F0F1;
     --darkgrey: #F0F0F0;
     
@@ -52,6 +53,7 @@ body{
 .btn.light{
     background: #fff;
     color: var(--black);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Header */
@@ -70,7 +72,8 @@ nav {
     width: 100%;
     z-index: 100;
     background-color: #fff;
-    padding: 25px 0;
+    height: 110px;
+    white-space: nowrap;
 }
 
 .nav-container {
@@ -113,7 +116,7 @@ nav ul li a{
     padding: 10px 15px;
     width: 180px;
     flex-grow: 1;
-    margin: 10px 10px;
+    height: 48px;
 }
 
 .search-container input {
@@ -158,7 +161,7 @@ nav ul li a{
     font-weight: 400;
     line-height: 22px;
     text-align: left;
-    color: #00000099;
+    color: var(--lightblack);
     margin-bottom: 30px;
     width: 580px;
 }
@@ -238,15 +241,131 @@ nav ul li a{
 /* Brands */
 
 #brand{
-    padding: 40px 0;
     background-color: #000000;
 }
 
 .brand-container {
+    height: 122px;
     max-width: 1240px;
     width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 106px;
+}
+
+/* New Arrivals */
+
+.darkheader{
+    font-family: "Integral CF Regular", serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 57.6px;
+    text-align: center;
+    color: var(--black);
+    margin: 72px 0 0 0;
+}
+
+.clothes-section .clothes-cards{
+    display: flex;
+    gap: 20px;
+    margin: 55px 0 0 0;
+}
+
+.clothes-section .clothes-cards .clothesimg{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.clothes-section .info p{
+    font-family: "Satoshi", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+    color: var(--black);
+    margin: 16px 0 0 0;
+}
+
+.clothes-section .clothing-card .rating{
+    display: flex;
+    gap: 13px;
+    justify-content: flex-start;
+    align-items: center;
+    height: 19px;
+    margin: 8px 0 0 0;
+}
+
+.clothes-section .clothing-card .rating p{
+    font-family: "Satoshi", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    color: var(--black);
+}
+
+.clothes-section .clothing-card .rating span{
+    font-family: "Satoshi", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    color: var(--lightblack);
+}
+
+.clothes-section .clothing-card .rating img{
+    height: 19px;
+}
+
+.clothes-section .clothing-card .price{
+    display: flex;
+    gap: 10px;
+}
+
+.clothes-section .clothing-card .price p{
+    font-family: "Satoshi", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+    color: var(--black);
+    margin: 8px 0 0 0;
+}
+
+.clothes-section .clothing-card .price .fullprice{
+    font-family: "Satoshi", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+    color: #00000066;
+    text-decoration: line-through;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #00000066;
+}
+
+.clothes-section .clothing-card .price .descontprct{
+    font-family: "Satoshi", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: left;
+    border-radius: 62px;
+    padding: 6px 14px;
+    color: #FF3333;
+    background: #FF33331A;
+    width: 58px;
+    height: 28px;
+    gap: 12px;
+}
+
+.clothes-section .wrapper .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 218px;
+    height: 52px;
+    margin: auto;
+    margin-top: 36px;
+    margin-bottom: 64px;
+}
+
+.clothes-section .wrapper hr{
+    border: 1px solid rgba(0, 0, 0, 0.1)
 }
