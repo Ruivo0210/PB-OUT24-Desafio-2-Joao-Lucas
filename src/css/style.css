@@ -193,7 +193,6 @@ nav ul li a{
 }
 
 .achievement-card .content{
-    padding: 8px 32px;
     z-index: 10;
     position: relative;
 }
@@ -370,6 +369,13 @@ nav ul li a{
 
 hr{
     border: 1px solid rgba(0, 0, 0, 0.1)
+}
+
+/* Style */
+
+.style{
+    background-color: var(--lightgrey);
+    border-radius: 40px;
 }
 
 /* Newsletter */
