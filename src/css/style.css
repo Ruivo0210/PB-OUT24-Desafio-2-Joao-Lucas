@@ -378,6 +378,35 @@ hr{
     border-radius: 40px;
 }
 
+.style h2{
+    padding-top: 70px;
+}
+
+.stylegrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 64px 64px 76px 64px;
+}
+
+.styleimg{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    height: 290px;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+#formal{
+    column-span: 2;
+}
+
+
 /* Testimonials */
 
 .testimonials{
@@ -387,6 +416,7 @@ hr{
     width: 100%;
     padding: 0 35px;
     position: relative;
+    margin-top: 80px;
 }
 
 .headingbtns{
@@ -405,15 +435,26 @@ hr{
     align-items: center;
 }
 
+#left{
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+#right{
+    cursor: pointer;
+}
+
 .testimonials .carousel{
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: calc((100%/3) - 12px);
-    gap: 16px;
+    grid-auto-columns: calc(100%/3);
+    gap: 20px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     scrollbar-width: none;
+    margin: 0;
+    margin-top: 40px;
 }
 
 .carousel::-webkit-scrollbar{
@@ -425,6 +466,17 @@ hr{
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+}
+
+.card .namecheck{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 16px;
+}
+
+.namecheck svg{
+    margin-left: 8px;
 }
 
 .carousel.no-transition{
@@ -443,18 +495,24 @@ hr{
 
 .carousel .card{
     scroll-snap-align: start;
-    height: 342px;
+    width: 400px;
+    height: 240px;
     list-style: none;
     border: 1px solid #0000001A;
     border-radius: 20px;
-    padding-bottom: 15px;
-    cursor: pointer;
 }
 
-.card h2{
+.cardcontent{
+    padding: 28px 32px;
+    width: 400px;
+    height: 240px;
+}
+
+.card h3{
     font-weight: 700;
     font-size: 20px;
     line-height: 22px;
+    margin: 0;
 }
 
 .card p {
@@ -462,6 +520,8 @@ hr{
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
+    margin: 0;
+    margin-top: 12px;
 }
 
 @media screen and (max-width: 900px){
@@ -482,7 +542,8 @@ hr{
     background-image: linear-gradient(
         0,
         var(--darkgrey) 50%,
-        transparent 50%)
+        transparent 50%);
+    margin-top: 80px;
 }
 
 .newsletter form{
