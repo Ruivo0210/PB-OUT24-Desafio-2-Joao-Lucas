@@ -3,7 +3,9 @@
 :root{
     --black: #000000;
     --white: #fff;
+    --mediumgrey: #00000066;
     --lightblack: #00000099;
+    --svgcolor: #6c6c6c;
     --lightgrey: #F2F0F1;
     --darkgrey: #F0F0F0;
     
@@ -82,7 +84,6 @@ nav {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 nav .logo{
@@ -90,6 +91,7 @@ nav .logo{
     font-size: 32px;
     font-weight: 700;
     color: var(--black);
+    text-decoration: none;
 }
 
 nav ul{
@@ -104,6 +106,7 @@ nav ul li a{
     font-family: "Satoshi", sans-serif;
     font-size: 16px;
     font-weight: 400;
+    line-height: 21.6px;
     text-decoration: none;
     color: var(--black);
 }
@@ -111,27 +114,29 @@ nav ul li a{
 .search-container {
     display: flex;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: var(--darkgrey);
     border-radius: 30px;
     padding: 10px 15px;
     width: 180px;
     flex-grow: 1;
     height: 48px;
+    margin-left: 40px;
 }
 
 .search-container input {
+    font-family: "Satoshi", sans-serif;
     border: none;
     background: transparent;
     outline: none;
     font-size: 16px;
+    font-weight: 400;
     flex: 1;
-    color: #6c6c6c;
 }
 
 .search-container svg {
     width: 20px;
     height: 20px;
-    fill: #6c6c6c;
+    fill: var(--svgcolor);
     margin-right: 10px;
 }
 
@@ -191,7 +196,6 @@ nav ul li a{
 
 #coupleimg {
     height: 620px;
-    vertical-align: middle;
     display: block;
 }
 
@@ -218,16 +222,11 @@ nav ul li a{
     padding-bottom: 120px;
 }
 
-.achievement-card .content div{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
 .achievement-card h3{
     font-family: "Satoshi", sans-serif;
     font-size: 40px;
     font-weight: 700;
+    line-height: 54px;
     text-align: left;
     color: var(--black);
     margin: 0;
@@ -237,8 +236,9 @@ nav ul li a{
     font-family: "Satoshi", sans-serif;
     font-size: 16px;
     font-weight: 400;
+    line-height: 22px;
     text-align: left;
-    color: var(--black);
+    color: var(--lightblack);
     margin: 0;
 }
 
@@ -350,10 +350,10 @@ nav ul li a{
     font-size: 24px;
     font-weight: 700;
     text-align: left;
-    color: #00000066;
+    color: var(--mediumgrey);
     text-decoration: line-through;
     text-decoration-thickness: 1px;
-    text-decoration-color: #00000066;
+    text-decoration-color: var(--mediumgrey);
 }
 
 .clothes-section .clothing-card .price .descontprct{
@@ -652,7 +652,7 @@ hr{
 .email-container svg{
     width: 20px;
     height: 20px;
-    fill: #6c6c6c;
+    fill: var(--svgcolor);
     margin-right: 10px;
 }
 
