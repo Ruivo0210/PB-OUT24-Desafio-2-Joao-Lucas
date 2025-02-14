@@ -142,41 +142,71 @@ nav ul li a{
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    padding-top: 60px;
+    padding-top: 40px;
 }
 
-.hero-section .left h1{
+.hero-section .left .herotext h1{
     font-family: "Integral CF Bold", serif;
     font-size: 64px;
     font-weight: 700;
     line-height: 64px;
     text-align: left;
     color: var(--black);
-    margin-bottom: 0;
+    margin: 0;
+    padding-top: 90px;
 }
 
-.hero-section .left p{
+.hero-section .left .herotext p{
     font-family: "Satoshi", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
     text-align: left;
     color: var(--lightblack);
-    margin-bottom: 30px;
+    margin: 0;
+    margin-top: 32px;
     width: 580px;
+}
+
+.hero-section .left .btn.dark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 218px;
+    height: 52px;
+    margin-top: 32px;
 }
 
 .hero-section .left{
     flex: 1;
 }
 
-.hero-section .right{
+.hero-section .right {
     align-self: flex-end;
 }
 
-.hero-section .right img{
+.hero-image {
+    position: relative;
+}
+
+#coupleimg {
     height: 620px;
     vertical-align: middle;
+    display: block;
+}
+
+.small-star, .big-star {
+    position: absolute;
+}
+
+.small-star {
+    top: 40%;
+    left: 8%;
+}
+
+.big-star {
+    top: 10%;
+    left: 80%;
 }
 
 /* Achievement Cards */
@@ -185,31 +215,7 @@ nav ul li a{
     margin-top: 50px;
     display: flex;
     flex-direction: row;
-    max-width: 200px
-}
-
-.achievement-card{
-    min-width: 200px;
-}
-
-.achievement-card .content{
-    z-index: 10;
-    position: relative;
-}
-
-.achievement-card.brands{
-    left: 47%;
-    top: 330px;
-}
-
-.achievement-card.products{
-    left: 45%;
-    top: 520px;
-}
-
-.achievement-card.costumers{
-    left: 43%;
-    top: 610px;
+    padding-bottom: 120px;
 }
 
 .achievement-card .content div{
@@ -233,8 +239,12 @@ nav ul li a{
     font-weight: 400;
     text-align: left;
     color: var(--black);
-    margin-top: -8px;
-    margin-bottom: 8px;
+    margin: 0;
+}
+
+.achievementhr{
+    margin-left: 28px;
+    margin-right: 28px;
 }
 
 /* Brands */
@@ -252,6 +262,10 @@ nav ul li a{
     justify-content: space-between;
     align-items: center;
     gap: 106px;
+}
+
+.brand-container img{
+    cursor: pointer;
 }
 
 /* Clothes Section */
@@ -384,8 +398,8 @@ hr{
 
 .stylegrid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     column-gap: 20px;
     row-gap: 20px;
     padding: 64px 64px 76px 64px;
@@ -395,17 +409,54 @@ hr{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 400px;
-    height: 290px;
     background-color: #fff;
     overflow: hidden;
     border-radius: 20px;
+    cursor: pointer;
+}
+
+.styleimg .stylecontent img{
+    height: 100%;
+    width: 100%;
+}
+
+.styleimg .stylecontent{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.styleimg .stylecontent p{
+    margin: 0;
+    padding-top: 25px;
+    padding-left: 36px;
+    font-family: "Satoshi", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48.6px;
+}
+
+#casual{
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 #formal{
-    column-span: 2;
+    grid-column-start: 3;
+    grid-column-end: 6;
+    background-color: #fbfbfb;
 }
 
+#party{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+#gym{
+    grid-column-start: 4;
+    grid-column-end: 6;
+}
 
 /* Testimonials */
 
