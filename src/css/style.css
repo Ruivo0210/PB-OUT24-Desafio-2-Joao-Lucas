@@ -58,6 +58,64 @@ body{
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+/* Ad */
+
+#announcement-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    height: 40px;
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+}
+
+#announcement-bar.hidden {
+    height: 0;
+    padding: 0;
+}
+
+.announcement-container {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.announcement-text{
+    margin-left: auto;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.announcement-container a{
+    color: var(--white);
+}
+
+.announcement-close{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+#announcement-bar button {
+    color: var(--white);
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;   
+}
+
 /* Header */
 
 header{
@@ -72,10 +130,14 @@ nav {
     align-items: center;
     position: fixed;
     width: 100%;
-    z-index: 100;
+    z-index: 999;
     background-color: var(--white);
     height: 110px;
     white-space: nowrap;
+    top: 40px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease;
 }
 
 .nav-container {
@@ -85,6 +147,10 @@ nav {
     display: flex;
     justify-content: space-between;
 }
+
+.navbar-top {
+    top: 0 !important;
+}   
 
 nav .logo{
     font-family: "Integral CF Bold",serif;

@@ -1,3 +1,28 @@
+// Anchor Tag Smooth Animation
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Announcement-bar Hide Animation
+
+document.getElementById("close-announcement").addEventListener("click", function () {
+    let bar = document.getElementById("announcement-bar");
+    document.querySelector("nav").classList.add("navbar-top");
+    bar.style.height = bar.scrollHeight - "px";
+    setTimeout(() => {
+      bar.classList.add("hidden");
+    }, 10);
+  });
+
+// Testimonials Carousel Animation
+
 const testimonials = document.querySelector(".testimonials");
 const carousel = document.querySelector(".carousel");
 const arrowBtns = document.querySelectorAll(".testimonials svg");
