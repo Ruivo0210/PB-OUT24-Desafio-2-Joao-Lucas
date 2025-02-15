@@ -204,10 +204,6 @@ nav ul li a{
     color: var(--black);
 }
 
-nav ul li a:hover{
-    transform: scale(1.05); 
-}
-
 .dropdown-container{
     display: flex;
     flex-direction: column;
@@ -658,13 +654,17 @@ hr{
     align-items: center;
 }
 
-#left{
-    margin-right: 16px;
+.headingbtns .leftright .arrows{
     cursor: pointer;
+    transition: all .2s ease-in-out;
 }
 
-#right{
-    cursor: pointer;
+.headingbtns .leftright .arrows:hover{
+    transform: scale(1.2); 
+}
+
+.headingbtns .leftright .arrows.left{
+    margin-right: 16px;
 }
 
 .testimonials .carousel{

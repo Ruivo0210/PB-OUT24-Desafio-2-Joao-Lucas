@@ -25,7 +25,7 @@ document.getElementById("close-announcement").addEventListener("click", function
 
 const testimonials = document.querySelector(".testimonials");
 const carousel = document.querySelector(".carousel");
-const arrowBtns = document.querySelectorAll(".testimonials svg");
+const arrowBtns = document.querySelectorAll(".leftright svg");
 const firstCardWidth = carousel.querySelector(".card").offsetWidth;
 const carouselChildrens = [...carousel.children];
 
