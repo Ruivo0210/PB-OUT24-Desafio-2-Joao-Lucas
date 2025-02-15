@@ -32,6 +32,10 @@ body{
     margin: 0 auto;
 }
 
+img, svg{
+    user-select: none
+}
+
 /* Buttons */
 
 .btn{
@@ -56,6 +60,23 @@ body{
     background: var(--white);
     color: var(--black);
     border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all .2s ease-in-out;
+}
+
+.btn:hover{
+    transform: scale(1.05); 
+}
+
+.btn.light:hover{
+    background-color: var(--lightgrey);
+}
+
+.btn.dark:hover{
+    background-color: var(--lightblack);
 }
 
 /* Newsletter-bar */
@@ -108,13 +129,18 @@ body{
     margin-left: auto;
 }
 
-#announcement-bar button {
-    color: var(--white);
+#announcement-bar button{
     background: none;
     border: none;
     font-size: 20px;
     cursor: pointer;   
+    transition: all .5s ease-in-out;
 }
+
+#announcement-bar button:hover{
+    transform: rotate(180deg);
+}
+
 
 /* Header */
 
@@ -178,16 +204,21 @@ nav ul li a{
     color: var(--black);
 }
 
+nav ul li a:hover{
+    transform: scale(1.05); 
+}
+
 .dropdown-container{
     display: flex;
     flex-direction: column;
     position: absolute;
-    margin-top: 40px;
+    top: 110px;
     left: 0;
     padding: 0;
     display: none;
     background-color: var(--white);
     width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown {
@@ -196,6 +227,8 @@ nav ul li a{
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 40px;
 }
 
 .shop:hover .dropdown-container{
@@ -303,16 +336,21 @@ nav ul li a{
     display: block;
 }
 
-.small-star, .big-star {
+.star {
     position: absolute;
+    transition: transform .7s ease-in-out;
 }
 
-.small-star {
+.star:hover{
+    transform: rotate(180deg);
+}
+
+.small {
     top: 40%;
     left: 8%;
 }
 
-.big-star {
+.big {
     top: 10%;
     left: 80%;
 }
@@ -346,6 +384,16 @@ nav ul li a{
     margin: 0;
 }
 
+.achievement-card{
+    transition: all .2s ease-in-out;
+    cursor: default;
+}
+
+.achievement-card:hover{
+    transform: scale(1.05); 
+}
+
+
 .achievementhr{
     margin-left: 28px;
     margin-right: 28px;
@@ -370,6 +418,11 @@ nav ul li a{
 
 .brand-container img{
     cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.brand-container img:hover{
+    transform: scale(1.1); 
 }
 
 /* Clothes Section */
@@ -394,6 +447,7 @@ nav ul li a{
     width: 100%;
     border-radius: 20px;
     cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .clothes-section .info p{
@@ -404,6 +458,14 @@ nav ul li a{
     color: var(--black);
     margin: 16px 0 0 0;
     cursor: pointer;
+}
+
+.clothes-section .clothing-card{
+    transition: all .2s ease-in-out;
+}
+
+.clothes-section .clothing-card:hover{
+    transform: scale(1.05); 
 }
 
 .clothes-section .clothing-card .rating{
@@ -517,6 +579,12 @@ hr{
     overflow: hidden;
     border-radius: 20px;
     cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all .2s ease-in-out;
+}
+
+.styleimg:hover{
+    transform: scale(1.02); 
 }
 
 .styleimg .stylecontent img{
