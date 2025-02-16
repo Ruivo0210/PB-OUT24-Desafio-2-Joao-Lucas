@@ -413,7 +413,6 @@ nav ul li a{
 }
 
 .brand-container img{
-    cursor: pointer;
     transition: all .2s ease-in-out;
 }
 
@@ -442,8 +441,11 @@ nav ul li a{
 .clothes-section .clothes-cards .clothesimg{
     width: 100%;
     border-radius: 20px;
-    cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.clothes-section a{
+    text-decoration: none;
 }
 
 .clothes-section .info p{
@@ -453,7 +455,6 @@ nav ul li a{
     text-align: left;
     color: var(--black);
     margin: 16px 0 0 0;
-    cursor: pointer;
 }
 
 .clothes-section .clothing-card{
@@ -574,9 +575,12 @@ hr{
     background-color: #fff;
     overflow: hidden;
     border-radius: 20px;
-    cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all .2s ease-in-out;
+}
+
+.styleimg a{
+    text-decoration: none;
 }
 
 .styleimg:hover{
@@ -603,6 +607,7 @@ hr{
     font-weight: 700;
     font-size: 36px;
     line-height: 48.6px;
+    color: var(--black);
 }
 
 #casual{
