@@ -211,10 +211,11 @@ nav ul li a{
     top: 110px;
     left: 0;
     padding: 0;
+    /* DISPLAY NONE */
     display: none;
     background-color: var(--white);
     width: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown {
@@ -242,6 +243,20 @@ nav ul li a{
 
 #shhopanchor{
     padding-bottom: 50px;
+}
+
+.dropdown-container .dropdown .sections-container{
+    /* DISPLAY NONE */
+    display: none;
+}
+
+.dropdown-container .dropdown .sections-container .sections{
+    display: flex;
+
+}
+
+.sections-clothes:hover .sections-container{
+    display: inline-table;
 }
 
 .search-container {
