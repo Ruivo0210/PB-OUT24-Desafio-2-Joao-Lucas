@@ -67,18 +67,6 @@ img, svg{
     transition: all .2s ease-in-out;
 }
 
-.btn:hover{
-    transform: scale(1.05); 
-}
-
-.btn.light:hover{
-    background-color: var(--lightgrey);
-}
-
-.btn.dark:hover{
-    background-color: var(--lightblack);
-}
-
 /* Newsletter-bar */
 
 #announcement-bar {
@@ -140,7 +128,6 @@ img, svg{
 #announcement-bar button:hover{
     transform: rotate(180deg);
 }
-
 
 /* Header */
 
@@ -228,17 +215,9 @@ nav ul li a{
     padding-bottom: 40px;
 }
 
-.shop:hover .dropdown-container{
-    display: block;
-}
-
 .dropdown-icon{
     transform: rotate(0deg);
     transition: 0.3s ease-in-out all;
-}
-
-.shop:hover .dropdown-icon{
-    transform: rotate(180deg);
 }
 
 #shhopanchor{
@@ -253,10 +232,6 @@ nav ul li a{
 .dropdown-container .dropdown .sections-container .sections{
     display: flex;
 
-}
-
-.sections-clothes:hover .sections-container{
-    display: inline-table;
 }
 
 .search-container {
@@ -400,14 +375,13 @@ nav ul li a{
     cursor: default;
 }
 
-.achievement-card:hover{
-    transform: scale(1.05); 
-}
-
-
 .achievementhr{
     margin-left: 28px;
     margin-right: 28px;
+}
+
+.maincards{
+    display: flex;
 }
 
 /* Brands */
@@ -429,10 +403,6 @@ nav ul li a{
 
 .brand-container img{
     transition: all .2s ease-in-out;
-}
-
-.brand-container img:hover{
-    transform: scale(1.1); 
 }
 
 /* Clothes Section */
@@ -474,10 +444,6 @@ nav ul li a{
 
 .clothes-section .clothing-card{
     transition: all .2s ease-in-out;
-}
-
-.clothes-section .clothing-card:hover{
-    transform: scale(1.05); 
 }
 
 .clothes-section .clothing-card .rating{
@@ -598,10 +564,6 @@ hr{
     text-decoration: none;
 }
 
-.styleimg:hover{
-    transform: scale(1.02); 
-}
-
 .styleimg .stylecontent img{
     height: 100%;
     width: 100%;
@@ -677,10 +639,6 @@ hr{
 .headingbtns .leftright .arrows{
     cursor: pointer;
     transition: all .2s ease-in-out;
-}
-
-.headingbtns .leftright .arrows:hover{
-    transform: scale(1.2); 
 }
 
 .headingbtns .leftright .arrows.left{
@@ -767,7 +725,7 @@ hr{
     margin-top: 12px;
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1100px){
     .testimonials .carousel{
         grid-auto-columns: calc(100%/2);
     }
@@ -883,6 +841,7 @@ footer h3{
     font-weight: 800;
     margin: 0;
     padding-bottom: 25px;
+    padding-right: 70px;
 }
 
 footer ul{
@@ -896,8 +855,26 @@ footer ul li{
 
 footer .links-container{
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 34px;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.footer-links-container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.top-links-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.bottom-links-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
 }
 
 footer .social a{
@@ -916,3 +893,300 @@ footer .underline .cardslogo{
     justify-content: space-between;
     align-items: center;
 }
+
+/* Media Query */
+
+/* Media Query for Desktop */
+
+@media(min-width: 1200px){
+
+    /* Hover */
+
+    .btn:hover{
+        transform: scale(1.05); 
+    }
+    
+    .btn.light:hover{
+        background-color: var(--lightgrey);
+    }
+    
+    .btn.dark:hover{
+        background-color: var(--lightblack);
+    }
+
+    .shop:hover .dropdown-container{
+        display: block;
+    }
+
+    .shop:hover .dropdown-icon{
+        transform: rotate(180deg);
+    }
+
+    .sections-clothes:hover .sections-container{
+        display: inline-table;
+    }
+
+    .achievement-card:hover{
+        transform: scale(1.05); 
+    }
+
+    .brand-container img:hover{
+        transform: scale(1.1); 
+    }
+
+    .clothes-section .clothing-card:hover{
+        transform: scale(1.05); 
+    }
+
+    .styleimg:hover{
+        transform: scale(1.02); 
+    }
+
+    .headingbtns .leftright .arrows:hover{
+        transform: scale(1.2); 
+    }
+
+}
+
+/* End of Media Query for Desktop */
+
+/* Media Query for Tablet */
+
+@media(max-width: 1100px){
+    
+    /* wrapper */
+
+    /* ARRUMAR! */
+
+    .navbar{
+        display: none;
+    }
+
+    .wrapper{
+        max-width: 700px;
+    }
+
+    
+    .nav-container{
+        max-width: 700px;
+        
+    }
+    
+    /* announcement-container */
+
+    .announcement-container{
+        max-width: 700px;
+    }
+
+    /* hero-section */
+
+    .hero-section{
+        flex-direction: column;
+    }
+
+    .hero-section .right{
+        align-self: center;
+    }
+
+    
+    .hero-section .left .herotext p {
+        margin-top: 20px;
+    }
+    
+    .hero-section .left .btn.dark{
+        width: unset;
+        margin-top: 24px;
+    }
+
+    .achievement-cards {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #hidehr{
+        display: none;
+    }
+
+    #downcard{
+        margin-top: 12px;
+    }
+
+    .maincards{
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    #coupleimg {
+        height: 500px
+    }
+
+    /* brand-container */
+
+    .brand-container {
+        max-width: 700px;
+        flex-wrap: wrap;
+        gap: 34px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        justify-content: space-around;
+        height: unset;
+    }
+
+    /* clothes-section */
+
+    .darkheader {
+        margin: 0;
+        margin-top: 50px;
+        font-size: 38px;
+    }
+
+    .clothes-section .clothes-cards {
+        margin: 0;
+        margin-top: 32px;
+        justify-content: space-evenly;
+    }
+
+    .clothes-section .wrapper .btn {
+        width: unset;
+        margin: auto;
+        margin-top: 24px;
+        margin-bottom: 40px;
+    }
+
+    .clothes-section .info p {
+        font-size: 14px;
+    }
+
+    .clothes-section .clothing-card .price p {
+        font-size: 14px;
+    }
+
+    .clothes-section .clothing-card .price .fullprice {
+        font-size: 14px;
+    }
+
+    .clothes-section .clothing-card .price .descontprct {
+        font-size: 10px;
+        padding: 3px 7px;
+        width: 40px;
+        height: 20px;
+    }
+
+    /* stylegrid-section */
+
+    .style h2 {
+        padding-top: 40px;
+    }
+    
+    .styleimg {
+        align-items: unset;
+    }
+
+    .styleimg .stylecontent p {
+        padding-top: 10px;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+    
+    .stylegrid {
+        column-gap: 15px;
+        row-gap: 15px;
+        padding: 40px 32px;
+    }
+    
+    /* testimonials-section */
+
+    .carousel .card {
+        width: unset;
+    }
+
+    .cardcontent {
+        width: unset;
+        padding: 20px 20px;
+    }
+
+    .testimonials {
+        margin-top: 50px;
+    }
+
+    .testimonials .carousel {
+        gap: 30px;
+    }
+
+    /* newsletter-section */
+
+    .newsletter form {
+        width: unset;
+        padding: 36px 32px;
+        align-items: center;
+    }
+ 
+    .newsletter form .darkheader {
+        font-size: 20px;
+    }
+
+    .newsletter form .darkheader .br{
+        display: none;
+    } 
+
+    .newsletter {
+        margin-top: 50px;
+    }
+
+    .submit-container {
+        gap: 10px;
+    }
+
+    /* footer-section */
+
+    footer .links-container {
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+
+    .firstcolumn {
+        display: flex;
+        flex-direction: column;
+        margin-right: auto;
+    }
+
+    .first-column-title{
+        padding-right: 0;
+    }
+
+    .footer-links-container{
+        display: flex;
+        justify-content: unset;
+        width: unset;
+    }
+
+    .footer-links-container .top-links-container{
+        margin-right: 100px;
+        display: unset;
+        justify-content: unset;
+        width: unset;
+    }
+
+    .footer-links-container ul{
+        padding-bottom: 10px;
+    }
+
+    footer .links-container{
+        display: flex;
+        justify-content: unset;
+        width: unset;
+    }
+
+    .bottom-links-container {
+        display: unset;
+        width: unset;
+        justify-content: unset;
+    }
+
+}
+
+/* End of Media Query for Tablet */
+
+/* Media Query for Phone */

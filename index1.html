@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Vertical</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Contêiner principal (duas colunas) */
+        .menu-container {
+            display: flex;
+            align-items: flex-start;
+            width: 400px; /* Ajuste conforme necessário */
+            border: 2px solid #ddd;
+            position: relative;
+        }
+
+        /* Primeira coluna - Categorias */
+        .menu {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            background: white;
+            padding: 10px;
+            width: 200px;
+            border-right: 2px solid #ddd;
+        }
+
+        .menu-item {
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            border-bottom: 1px solid #eee;
+            position: relative;
+        }
+
+        /* Segunda coluna - Subcategorias */
+        .submenu-container {
+            position: absolute;
+            display: none;
+            top: 0;
+            left: 200px;
+            width: 200px;
+            background: white;
+            padding: 10px;
+            border-left: 2px solid #ddd;
+        }
+
+        .submenu {
+            list-style: none;
+        }
+
+        .submenu li {
+            padding: 5px 0;
+        }
+
+        /* Exibir submenu ao passar o mouse sobre a categoria */
+        .menu-item:hover + .submenu-container,
+        .menu-item:focus + .submenu-container,
+        .submenu-container:hover {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="menu-container">
+        <!-- Primeira coluna (Categorias) -->
+        <div class="menu">
+            <div class="menu-item" tabindex="0">Clothes</div>
+            <div class="submenu-container">
+                <ul class="submenu">
+                    <li>See All</li>
+                    <li>Sets</li>
+                    <li>Tailoring</li>
+                    <li>Sports</li>
+                    <li>Plus Size</li>
+                </ul>
+            </div>
+
+            <div class="menu-item" tabindex="0">Men</div>
+            <div class="submenu-container">
+                <ul class="submenu">
+                    <li>T-shirts</li>
+                    <li>Tank tops</li>
+                    <li>Jackets</li>
+                    <li>Pants</li>
+                    <li>Shorts</li>
+                </ul>
+            </div>
+
+            <div class="menu-item" tabindex="0">Women</div>
+            <div class="submenu-container">
+                <ul class="submenu">
+                    <li>Dresses</li>
+                    <li>Blouses</li>
+                    <li>T-shirts</li>
+                    <li>Pants</li>
+                    <li>Skirts</li>
+                </ul>
+            </div>
+
+            <div class="menu-item" tabindex="0">Shoes</div>
+            <div class="submenu-container">
+                <ul class="submenu">
+                    <li>Sneakers</li>
+                    <li>Flip-flops</li>
+                    <li>Boots</li>
+                    <li>Shoes</li>
+                    <li>Sandals</li>
+                </ul>
+            </div>
+
+            <div class="menu-item" tabindex="0">Accessories</div>
+            <div class="submenu-container">
+                <ul class="submenu">
+                    <li>Watches</li>
+                    <li>Glasses</li>
+                    <li>Bags</li>
+                    <li>Belts</li>
+                    <li>Hats</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
