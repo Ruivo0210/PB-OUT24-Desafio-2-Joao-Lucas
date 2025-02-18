@@ -12,15 +12,44 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Announcement-bar Hide Animation
 
+// Desktop-nav
+
 document.getElementById("close-announcement").addEventListener("click", function () {
     let bar = document.getElementById("announcement-bar");
-    document.querySelector("nav").classList.add("navbar-top");
+    document.getElementById("desktop-nav").classList.add("navbar-top");
     bar.style.height = bar.scrollHeight - "px";
     setTimeout(() => {
       bar.classList.add("hidden");
     }, 10);
   });
 
+// Mobile-nav
+  
+document.getElementById("close-announcement").addEventListener("click", function () {
+    let bar = document.getElementById("announcement-bar");
+    document.getElementById("mobile-nav").classList.add("navbar-top");
+    bar.style.height = bar.scrollHeight - "px";
+    setTimeout(() => {
+      bar.classList.add("hidden");
+    }, 10);
+  });
+
+// Open and close nav container
+
+  const menuIcon = document.querySelector(".menu-icon");
+  const mobileMenuContainer = document.querySelector(".mobile-nav-container");
+  const transparentbkg = document.querySelector(".transparentbkg");
+  
+  menuIcon.addEventListener("click", () => {
+      mobileMenuContainer.classList.toggle("active");
+      transparentbkg.classList.toggle("active");
+
+    });
+
+transparentbkg.addEventListener("click", () => {
+      mobileMenuContainer.classList.toggle("active");
+      transparentbkg.classList.toggle("active");
+    });
 // Testimonials Carousel Animation
 
 const testimonials = document.querySelector(".testimonials");

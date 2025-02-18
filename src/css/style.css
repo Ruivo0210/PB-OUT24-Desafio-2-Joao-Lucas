@@ -138,6 +138,10 @@ header {
     padding-top: 50px;
 }
 
+nav.mobile.nav{
+    display: none;
+}
+
 nav {
     display: flex;
     justify-content: center;
@@ -152,10 +156,9 @@ nav {
     padding: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: top 0.3s ease;
-    position: fixed;
 }
 
-.nav-container {
+.desktop-nav-container {
     max-width: 1240px;
     width: 100%;
     margin: 0 auto;
@@ -956,18 +959,12 @@ footer .underline .cardslogo {
 
     /* wrapper */
 
-    /* ARRUMAR! */
-
-    .navbar {
-        display: none;
-    }
-
     .wrapper {
         max-width: 700px;
     }
 
 
-    .nav-container {
+    .desktop-nav-container {
         max-width: 700px;
 
     }
@@ -1189,3 +1186,100 @@ footer .underline .cardslogo {
 /* End of Media Query for Tablet */
 
 /* Media Query for Phone */
+
+@media (max-width: 800px){
+    
+    nav.desktop.nav {
+        display: none;
+    }
+
+    nav.mobile.nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        z-index: 999;
+        background-color: var(--white);
+        height: 110px;
+        white-space: nowrap;
+        top: 40px;
+        padding: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: top 0.3s ease;
+        position: fixed;
+    }
+
+    .focuswidth{
+        display: flex;
+    }
+    
+    .transparentbkg{
+        position: fixed;
+        height: 100vh;
+        width: 50%;
+        z-index: 200;
+        bottom: 100%;
+    }
+
+    .transparentbkg.active{
+        bottom: 0;
+    }
+
+    .mobile-nav-container {
+        position: fixed;
+        height: 100vh;
+        width: 50%;
+        bottom: 100%;
+        right: 0;
+        background-color: #000000db;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 200;
+        transition: all 400ms ease;
+    }
+
+    .mobile-nav-container.active{
+        bottom: 0;
+    }
+
+    .mobile.nav .menu-icon{
+        transition: all .1s ease-in-out;
+    }
+
+    .mobile.nav .menu-icon:active{
+        transform: scale(1.2);
+    }
+
+    .mobile.nav .logo {
+        font-family: "Integral CF Bold", serif;
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--black);
+        text-decoration: none;
+    }
+    
+    .mobile-nav-container ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+    }
+
+    #shhopanchor{
+        padding-left: 10px;
+    }
+    
+    .mobile-nav-container ul li a {
+        font-family: "Satoshi", sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 21.6px;
+        text-decoration: none;
+        color: var(--white);
+    }
+
+}
