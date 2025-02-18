@@ -158,6 +158,10 @@ nav {
     transition: top 0.3s ease;
 }
 
+.focuswidth{
+    display: none;
+}
+
 .desktop-nav-container {
     max-width: 1240px;
     width: 100%;
@@ -963,19 +967,13 @@ footer .underline .cardslogo {
         max-width: 700px;
     }
 
-
-    .desktop-nav-container {
-        max-width: 700px;
-
-    }
-
     /* announcement-container */
 
     .announcement-container {
         max-width: 700px;
     }
 
-    /* hero-section */
+    /* Hero Section */
 
     .hero-section {
         flex-direction: column;
@@ -1185,14 +1183,14 @@ footer .underline .cardslogo {
 
 /* End of Media Query for Tablet */
 
-/* Media Query for Phone */
+/* Media Query for Nav */
 
-@media (max-width: 800px){
+@media (max-width: 950px){
     
     nav.desktop.nav {
         display: none;
     }
-
+    
     nav.mobile.nav{
         display: flex;
         justify-content: center;
@@ -1208,7 +1206,7 @@ footer .underline .cardslogo {
         transition: top 0.3s ease;
         position: fixed;
     }
-
+    
     .focuswidth{
         display: flex;
     }
@@ -1220,11 +1218,11 @@ footer .underline .cardslogo {
         z-index: 200;
         bottom: 100%;
     }
-
+    
     .transparentbkg.active{
         bottom: 0;
     }
-
+    
     .mobile-nav-container {
         position: fixed;
         height: 100vh;
@@ -1236,21 +1234,21 @@ footer .underline .cardslogo {
         align-items: center;
         justify-content: center;
         z-index: 200;
-        transition: all 400ms ease;
+        transition: all 800ms ease;
     }
-
+    
     .mobile-nav-container.active{
         bottom: 0;
     }
-
+    
     .mobile.nav .menu-icon{
         transition: all .1s ease-in-out;
     }
-
+    
     .mobile.nav .menu-icon:active{
         transform: scale(1.2);
     }
-
+    
     .mobile.nav .logo {
         font-family: "Integral CF Bold", serif;
         font-size: 32px;
@@ -1268,7 +1266,7 @@ footer .underline .cardslogo {
         margin: 0;
         padding-left: 0;
     }
-
+    
     #shhopanchor{
         padding-left: 10px;
     }
@@ -1281,5 +1279,97 @@ footer .underline .cardslogo {
         text-decoration: none;
         color: var(--white);
     }
+    
+}
+
+/* End of Media Query for Nav */
+
+/* Media Query for Phone */
+
+@media (max-width: 700px){
+
+    .navbar, .brand-section, .clothes-section,
+    .stylegridsection, .testimonials, .newsletter-section, .footersection{
+        display: none;
+    }
+
+    .wrapper {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    /* Newsletter Bar */
+
+    #announcement-bar {
+        padding: 0;
+    }
+
+    .announcement-text {
+        font-size: 12px;
+    }
+
+    #announcement-bar button {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    /* Hero Section */
+
+    .hero-section .left{
+        width: 100%;
+    }
+
+    .hero-section .left .herotext h1 {
+        font-size: 36px;
+        line-height: 34px;
+        padding-top: 0;
+    }
+    
+    .hero-section .left .herotext p {
+        font-size: 14px;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .hero-section .left .btn.dark {
+        width: unset;
+    }
+
+    .hero-section .right{
+        overflow: hidden;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .maincards {
+        justify-content: space-evenly;
+    }
+
+    .achievement-card h3{
+        font-size: 24px;
+    }
+
+    .achievement-card p {
+        font-size: 12px;
+    }
+
+    #coupleimg {
+        height: 400px;
+    }
+
+    .big {
+        width: 74px;
+        top: 0;
+        left: 70%;
+    }
+
+    .small {
+        width: 44px;
+        top: 25%;
+        left: 15%;
+    }
+
 
 }
