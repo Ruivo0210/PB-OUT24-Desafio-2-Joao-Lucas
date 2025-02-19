@@ -1,13 +1,15 @@
 /* ---- Root ---- */
 
 :root {
-  --black: #000000;
   --white: #fff;
-  --mediumgrey: #00000066;
-  --lightblack: #00000099;
-  --svgcolor: #6c6c6c;
   --lightgrey: #f2f0f1;
   --darkgrey: #f0f0f0;
+  --svgcolor: #6c6c6c;
+  --mediumgrey: #00000066;
+  --bordercolor: #0000001a;
+  --navcontainer: #000000db;
+  --lightblack: #00000099;
+  --black: #000000;
 
 
     /* ---- Fonts ---- */
@@ -390,7 +392,7 @@ nav ul li a {
 /* Brands */
 
 #brand {
-  background-color: #000000;
+  background-color: var(--black);
 }
 
 .brand-container {
@@ -698,7 +700,7 @@ hr {
   width: 400px;
   height: 240px;
   list-style: none;
-  border: 1px solid #0000001a;
+  border: 1px solid var(--bordercolor);
   border-radius: 20px;
 }
 
@@ -976,7 +978,7 @@ footer .underline .cardslogo {
   }
 
   .carousel .card:hover {
-      border: 2px solid #0000001a;
+    border: 2px solid var(--bordercolor);
   }
   
 }
@@ -1051,7 +1053,7 @@ footer .underline .cardslogo {
     width: 50%;
     bottom: 100%;
     left: 0;
-    background-color: #000000db;
+    background-color: var(--navcontainer);
     display: flex;
     align-items: center;
     justify-content: center;
