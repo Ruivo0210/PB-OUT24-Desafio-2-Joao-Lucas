@@ -120,3 +120,66 @@ document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
 testimonials.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 testimonials.addEventListener("mouseleave", autoPlay);
+
+// Email Validation
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".newsletter form");
+    const emailInput = document.querySelector(".email-container input");
+
+    // Criando dinamicamente a mensagem de feedback (erro/sucesso)
+    const message = document.createElement("span");
+    message.classList.add("message");
+    emailInput.parentNode.appendChild(message);
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Impede o envio do formulário
+
+        const email = emailInput.value.trim();
+        if (!validateEmail(email)) {
+            message.textContent = "Enter a valid email address.";
+            message.classList.add("error");
+            message.classList.remove("success");
+            message.style.display = "block"; // Exibe a mensagem de erro
+            emailInput.classList.add("invalid");
+            emailInput.classList.remove("success");
+            emailInput.classList.add("hide-placeholder");
+
+            setTimeout(() => {
+                message.style.display = "none"; // Oculta sucesso após 3s
+                emailInput.classList.remove("hide-placeholder");
+            }, 3000);
+
+            emailInput.value = ""; // Limpa o campo após cadastro
+            return;
+        }
+
+        // Caso o e-mail seja válido:
+        message.textContent = "Email registered successfully.";
+        message.classList.add("success");
+        message.classList.remove("error");
+        message.style.display = "block"; // Exibe mensagem de sucesso
+        emailInput.classList.add("success");
+        emailInput.classList.remove("invalid");
+        emailInput.classList.add("hide-placeholder");
+
+        setTimeout(() => {
+            message.style.display = "none"; // Oculta sucesso após 3s
+            emailInput.classList.remove("hide-placeholder");
+        }, 3000);
+
+        emailInput.value = ""; // Limpa o campo após cadastro
+    });
+
+    // Clicar na mensagem foca no input e remove a mensagem
+    message.addEventListener("click", function () {
+        emailInput.focus();
+        message.style.display = "none";
+        emailInput.classList.remove("hide-placeholder", "invalid", "success");
+    });
+
+    function validateEmail(email) {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    }
+});
