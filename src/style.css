@@ -200,6 +200,7 @@ nav ul li a {
   line-height: 21.6px;
   text-decoration: none;
   color: var(--black);
+  transition: all 0.2s ease-in-out;
 }
 
 .dropdown-container {
@@ -943,6 +944,10 @@ footer .underline .cardslogo {
 
   .btn.dark:hover {
     background-color: var(--lightblack);
+  }
+
+  nav ul li a:hover{
+    color: var(--lightblack);
   }
 
   .shop:hover .dropdown-container {
