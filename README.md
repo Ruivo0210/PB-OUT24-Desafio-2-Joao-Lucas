@@ -1,5 +1,5 @@
 
-# Shop.co Homepage ✦
+# ✦ Shop.co Homepage ✦
 
 This project is a responsive homepage for an e-commerce website, developed as part of the Challenge 2 of Full-Stack Development Internship of Compass.Uol. The goal was to create a dynamic, functional, and visually appealing homepage using HTML, CSS, and JavaScript, based on the provided Figma template.
 
